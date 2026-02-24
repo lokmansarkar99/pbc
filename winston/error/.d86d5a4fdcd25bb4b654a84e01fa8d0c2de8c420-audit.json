@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 7
+    },
+    "auditLog": "C:\\Users\\Lokman\\PROJECTS\\ProBackendCodeBaseStructure\\winston\\error\\.d86d5a4fdcd25bb4b654a84e01fa8d0c2de8c420-audit.json",
+    "files": [
+        {
+            "date": 1771755169863,
+            "name": "C:\\Users\\Lokman\\PROJECTS\\ProBackendCodeBaseStructure\\winston\\error\\22-02-2026-16-error.log",
+            "hash": "bfe3ae2878ed629bbd42d8e5a6e000cdce1fefa5e480ad9802165e7513d98760"
+        }
+    ],
+    "hashType": "sha256"
+}

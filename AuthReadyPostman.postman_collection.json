@@ -1,0 +1,440 @@
+{
+  "info": {
+    "_postman_id": "5549dfce-e500-40cb-9b75-f41349515a2e",
+    "name": "AuthReadyPostman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46139239",
+    "_collection_link": "https://go.postman.co/collection/46139239-5549dfce-e500-40cb-9b75-f41349515a2e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "create_user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "data",
+                  "value": "{\n    \"name\":\"ISMAIL\",\n    \"email\":\"ismailhosen8757@gmail.com\",\n    \"password\":\"Ab12345678\"\n}",
+                  "type": "text",
+                  "uuid": "a90f9cae-f90c-4542-a281-443602d17df7"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "a5b0cfd2-6dba-41ab-95eb-892225b879d5",
+                  "src": "/C:/Users/Ismail Hossen/Downloads/PremiumImage.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/user",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateUser",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTc0ODg5Zjc3MmVlNGRjMDk2OGQwMmYiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5MzE0MzYyLCJleHAiOjE3Njk0MDA3NjJ9.cyKbBgWZhkVkcL7YrmrQnmlA5p3mILnpySIVJXmKn-I",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "data",
+                  "value": "{\n    \"name\":\"Yamin\",\n    \"password\":\"Ab12345678\"\n}",
+                  "type": "text",
+                  "uuid": "1695511b-0f56-462b-aedd-d0c442b53f73"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "57e0a253-ba3c-4b35-aa41-5b74a8cfb59c",
+                  "src": "/C:/Users/Ismail Hossen/Downloads/Screenshot 2026-01-24 174544.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/user",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all_user",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTc0ODg5Zjc3MmVlNGRjMDk2OGQwMmYiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5MzM3ODQ3LCJleHAiOjE3Njk0MjQyNDd9.4TQgN3C7WKRZdX51enDIGaWjXotPcbWWIsYzz9WQPG0",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/user?searchTerm=aminul2@gmail.com",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "user"
+              ],
+              "query": [
+                {
+                  "key": "searchTerm",
+                  "value": "aminul2@gmail.com",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "block/unblock",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{adminToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "data",
+                  "value": "{\n  \"title\": \"Agency Management Book\",\n  \"description\": \"A complete agency management platform where admin can create projects, manage clients, and showcase agency works.\",\n  \"category\": [\"Web Application\", \"Agency\", \"Management\"],\n  \"image\": \"https://res.cloudinary.com/demo/image/upload/agency-cover.png\",\n  \"userId\": \"665f1c7e2a4b9c001234abcd\",\n  \"liveLink\": \"https://agency-project-demo.com\",\n  \"githubLink\": \"https://github.com/ismailhossen/agency-project\",\n  \"totalView\": 120,\n  \"rating\": 4.6,\n\n  \"technologies\": [\n    \"React\",\n    \"TypeScript\",\n    \"Node.js\",\n    \"Express\",\n    \"MongoDB\",\n    \"Tailwind CSS\"\n  ],\n\n  \"status\": \"published\",\n  \"isFeatured\": true\n}\n",
+                  "type": "text",
+                  "uuid": "8485dfef-fc82-46b6-ac1a-3012b1eff394"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/user/status/695e26b6294dcc613e768ecd",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "user",
+                "status",
+                "695e26b6294dcc613e768ecd"
+              ],
+              "query": [
+                {
+                  "key": "RoleChange",
+                  "value": "true",
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"ismailhosen8757@gmail.com\",\r\n    \"password\":\"Ab12345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTc0NGJkZjM3M2Q3MWVkNjNiNTZlZjIiLCJlbWFpbCI6ImFtaW51bDFAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5MjMzMjgwLCJleHAiOjE3Njk4MzgwODB9.pYcd5iU_XzcRhumYZGrSmoP2J6tp3VirE9DPvZgxyxM\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/logout",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "SentOtp  ⭕",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"user@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/send-otp",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "send-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "forgetPassword  ⭕",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"user@gmail.com\",\r\n    \"otp\": 226865,\r\n    \"hash\":\"ad2c0c2cbc28bfeff8d2e421ab15950e3fc2cdd4a7d87b5b2304b79eafac88a7\",\r\n    \"password\":\"Is12345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/forget-password",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "forget-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "changePassword",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTc0ODg5Zjc3MmVlNGRjMDk2OGQwMmYiLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5MjQ4NzQwLCJleHAiOjE3NjkzMzUxNDB9.tNjpor9aJSBmEs3rZQGsK81nmeln3Gkuywgw4BbBwLk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"oldPassword\":\"ISMAIL12345\",\r\n    \"newPassword\": \"Ab12345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/change-password",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "change-password"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "verifyUser ⭕",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"user@gmail.com\",\r\n    \"otp\": 552793,\r\n    \"hash\":\"6d53855dfbdbc387b1ed41e5978692b81677c043a7315d813a6706200ba7f1a7\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/verify-user",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "verify-user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "RefreshToken",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTc0NGJkZjM3M2Q3MWVkNjNiNTZlZjIiLCJlbWFpbCI6ImFtaW51bDFAZ21haWwuY29tIiwicm9sZSI6IkFETUlOIiwiaWF0IjoxNzY5MjMzMjgwLCJleHAiOjE3Njk4MzgwODB9.pYcd5iU_XzcRhumYZGrSmoP2J6tp3VirE9DPvZgxyxM\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/auth/refresh-token",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "auth",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "item": [
+        {
+          "name": "sentMessage",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"aminul\",\r\n    \"email\":\"aminul254237@gmail.com\",\r\n    \"phone\":\"+880 1794-685758\",\r\n    \"message\":\"Check Logo \"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/contact",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "contact"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllMessage",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{adminToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "data",
+                  "value": "{\n  \"title\": \"Agency Management Book\",\n  \"description\": \"A complete agency management platform where admin can create projects, manage clients, and showcase agency works.\",\n  \"category\": [\"Web Application\", \"Agency\", \"Management\"],\n  \"image\": \"https://res.cloudinary.com/demo/image/upload/agency-cover.png\",\n  \"userId\": \"665f1c7e2a4b9c001234abcd\",\n  \"liveLink\": \"https://agency-project-demo.com\",\n  \"githubLink\": \"https://github.com/ismailhossen/agency-project\",\n  \"totalView\": 120,\n  \"rating\": 4.6,\n\n  \"technologies\": [\n    \"React\",\n    \"TypeScript\",\n    \"Node.js\",\n    \"Express\",\n    \"MongoDB\",\n    \"Tailwind CSS\"\n  ],\n\n  \"status\": \"published\",\n  \"isFeatured\": true\n}\n",
+                  "type": "text",
+                  "uuid": "8485dfef-fc82-46b6-ac1a-3012b1eff394"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base_url}}/contact",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "contact"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
